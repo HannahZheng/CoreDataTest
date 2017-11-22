@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t0m-xW-j2B"/>
+                        <viewControllerLayoutGuide type="bottom" id="9d5-8F-gQq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGX-Hc-lTE">
+                                <rect key="frame" x="0.0" y="94" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="dGj-Wu-m8O"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="q0j-1u-TJH"/>
+                                </constraints>
+                                <state key="normal" title="新增数据"/>
+                                <connections>
+                                    <action selector="addData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="asj-k9-CSa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1l4-2x-QHa">
+                                <rect key="frame" x="255" y="94" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="9jZ-5r-1mc"/>
+                                    <constraint firstAttribute="height" constant="40" id="hcl-gh-esi"/>
+                                </constraints>
+                                <state key="normal" title="查询全部数据"/>
+                                <connections>
+                                    <segue destination="mET-iA-IxS" kind="presentation" id="yia-E2-0k8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx1-WD-E9D">
+                                <rect key="frame" x="0.0" y="189" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2Y2-ww-t5j"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="iYd-gh-395"/>
+                                </constraints>
+                                <state key="normal" title="删除数据"/>
+                                <connections>
+                                    <action selector="deleteData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcs-z5-xU2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dk-Ww-3s1">
+                                <rect key="frame" x="255" y="189" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="M7f-S1-RFz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="R9e-Au-rF0"/>
+                                </constraints>
+                                <state key="normal" title="数据更改"/>
+                                <connections>
+                                    <action selector="changeData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fbB-kG-JPn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHB-FB-pFf">
+                                <rect key="frame" x="60" y="259" width="255" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="60r-BV-v05"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="fpj-2J-SKO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="jj7-tn-Vv5"/>
+                                </constraints>
+                                <state key="normal" title="NSFetchedResultsController使用"/>
+                                <connections>
+                                    <action selector="getAllData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ou-fx-zeP"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jGL-KY-U4M">
+                                <rect key="frame" x="0.0" y="344" width="375" height="434"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ruA-9M-2wx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ebD-xy-Rtl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1dk-Ww-3s1" firstAttribute="top" secondItem="1l4-2x-QHa" secondAttribute="bottom" constant="55" id="0xf-IV-c2d"/>
+                            <constraint firstItem="ZHB-FB-pFf" firstAttribute="top" secondItem="1dk-Ww-3s1" secondAttribute="bottom" constant="30" id="8zx-sT-cp7"/>
+                            <constraint firstItem="GGX-Hc-lTE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Adm-FG-Ugn"/>
+                            <constraint firstItem="GGX-Hc-lTE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B0X-JT-sHe"/>
+                            <constraint firstItem="9d5-8F-gQq" firstAttribute="top" secondItem="jGL-KY-U4M" secondAttribute="bottom" id="De5-wK-G4i"/>
+                            <constraint firstItem="rx1-WD-E9D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GJf-Be-Kn9"/>
+                            <constraint firstItem="GGX-Hc-lTE" firstAttribute="top" secondItem="t0m-xW-j2B" secondAttribute="bottom" constant="50" id="Lec-Vu-ZT7"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ZHB-FB-pFf" secondAttribute="trailing" id="P9g-Uf-kks"/>
+                            <constraint firstAttribute="trailing" secondItem="1dk-Ww-3s1" secondAttribute="trailing" id="PjZ-ph-tC8"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GGX-Hc-lTE" secondAttribute="trailing" constant="20" symbolic="YES" id="Q84-Ph-Qou"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rx1-WD-E9D" secondAttribute="trailing" constant="20" symbolic="YES" id="RZJ-oG-WcO"/>
+                            <constraint firstItem="jGL-KY-U4M" firstAttribute="top" secondItem="ZHB-FB-pFf" secondAttribute="bottom" constant="50" id="UYN-QH-7oG"/>
+                            <constraint firstItem="jGL-KY-U4M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XPA-CB-bdr"/>
+                            <constraint firstAttribute="trailing" secondItem="jGL-KY-U4M" secondAttribute="trailing" id="ZGp-zo-HL2"/>
+                            <constraint firstItem="jGL-KY-U4M" firstAttribute="top" secondItem="ZHB-FB-pFf" secondAttribute="bottom" constant="50" id="eQQ-0D-SrT"/>
+                            <constraint firstAttribute="trailing" secondItem="jGL-KY-U4M" secondAttribute="trailing" id="fZz-7U-TBg"/>
+                            <constraint firstItem="1l4-2x-QHa" firstAttribute="top" secondItem="t0m-xW-j2B" secondAttribute="bottom" constant="50" id="mJN-ct-qmR"/>
+                            <constraint firstItem="rx1-WD-E9D" firstAttribute="top" secondItem="GGX-Hc-lTE" secondAttribute="bottom" constant="55" id="qJE-NF-pQY"/>
+                            <constraint firstItem="jGL-KY-U4M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qTT-Cu-mDu"/>
+                            <constraint firstItem="1dk-Ww-3s1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="t9j-H4-KFE"/>
+                            <constraint firstAttribute="trailing" secondItem="1l4-2x-QHa" secondAttribute="trailing" id="tds-6i-Xyd"/>
+                            <constraint firstItem="ZHB-FB-pFf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="vqy-qG-YFD"/>
+                            <constraint firstItem="1l4-2x-QHa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="wqo-0e-zwi"/>
+                            <constraint firstItem="9d5-8F-gQq" firstAttribute="top" secondItem="jGL-KY-U4M" secondAttribute="bottom" id="yve-M0-gkL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainTable" destination="jGL-KY-U4M" id="PaA-oN-rxl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303.19999999999999" y="25.123152709359609"/>
+        </scene>
+        <!--DataShowViewController-->
+        <scene sceneID="lMe-By-IPj">
+            <objects>
+                <viewController title="DataShowViewController" id="mET-iA-IxS" customClass="DataShowViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qfS-94-sVl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zlU-QE-dXm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Uj-hi-4O2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vUd-Cm-AHC">
+                                <rect key="frame" x="0.0" y="108" width="375" height="670"/>
+                                <color key="backgroundColor" red="0.74098406979999998" green="1" blue="0.7025805302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mET-iA-IxS" id="H0K-jM-l7p"/>
+                                    <outlet property="delegate" destination="mET-iA-IxS" id="blb-zZ-byn"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4m-50-ZH6">
+                                <rect key="frame" x="16" y="64" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WnY-d8-QTp"/>
+                                    <constraint firstAttribute="width" constant="44" id="xf7-n7-ZMG"/>
+                                </constraints>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="goBack:" destination="mET-iA-IxS" eventType="touchUpInside" id="eib-L2-2ui"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U4m-50-ZH6" firstAttribute="top" secondItem="qfS-94-sVl" secondAttribute="bottom" constant="20" id="IMO-dw-yGd"/>
+                            <constraint firstItem="U4m-50-ZH6" firstAttribute="leading" secondItem="5Uj-hi-4O2" secondAttribute="leadingMargin" id="aol-4z-aTF"/>
+                            <constraint firstItem="zlU-QE-dXm" firstAttribute="top" secondItem="vUd-Cm-AHC" secondAttribute="bottom" id="ehZ-hb-uEY"/>
+                            <constraint firstItem="vUd-Cm-AHC" firstAttribute="leading" secondItem="5Uj-hi-4O2" secondAttribute="leading" id="gEp-zv-hHS"/>
+                            <constraint firstAttribute="trailing" secondItem="vUd-Cm-AHC" secondAttribute="trailing" id="qcg-uM-4BX"/>
+                            <constraint firstItem="vUd-Cm-AHC" firstAttribute="top" secondItem="U4m-50-ZH6" secondAttribute="bottom" id="u7M-jr-Fcd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainTable" destination="vUd-Cm-AHC" id="nIT-2O-xQC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6KY-FB-46Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.25" y="24.295774647887324"/>
+        </scene>
+    </scenes>
+</document>
