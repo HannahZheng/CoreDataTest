@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		210EA3381FB97D4A00E530E3 /* StudentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210EA3361FB97D4A00E530E3 /* StudentCell.m */; };
 		210EA3391FB97D4A00E530E3 /* StudentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210EA3371FB97D4A00E530E3 /* StudentCell.xib */; };
+		211891481FC5513C0033F389 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 211891471FC551220033F389 /* libsqlite3.tbd */; };
+		211891491FC551440033F389 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 211891461FC5510E0033F389 /* libc.tbd */; };
+		2118914B1FC5514C0033F389 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2118914A1FC5514C0033F389 /* libc++.tbd */; };
 		212DE29B1FB6A9F2005B5FC8 /* School+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 212DE2881FB6A9F2005B5FC8 /* School+CoreDataClass.m */; };
 		212DE29C1FB6A9F2005B5FC8 /* School+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 212DE28A1FB6A9F2005B5FC8 /* School+CoreDataProperties.m */; };
 		212DE29D1FB6A9F2005B5FC8 /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 212DE28C1FB6A9F2005B5FC8 /* Student+CoreDataClass.m */; };
@@ -33,6 +36,9 @@
 		210EA3351FB97D4A00E530E3 /* StudentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentCell.h; sourceTree = "<group>"; };
 		210EA3361FB97D4A00E530E3 /* StudentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentCell.m; sourceTree = "<group>"; };
 		210EA3371FB97D4A00E530E3 /* StudentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentCell.xib; sourceTree = "<group>"; };
+		211891461FC5510E0033F389 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		211891471FC551220033F389 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2118914A1FC5514C0033F389 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		212DE2871FB6A9F2005B5FC8 /* School+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "School+CoreDataClass.h"; sourceTree = "<group>"; };
 		212DE2881FB6A9F2005B5FC8 /* School+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "School+CoreDataClass.m"; sourceTree = "<group>"; };
 		212DE2891FB6A9F2005B5FC8 /* School+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "School+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -73,17 +79,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2118914B1FC5514C0033F389 /* libc++.tbd in Frameworks */,
+				211891491FC551440033F389 /* libc.tbd in Frameworks */,
+				211891481FC5513C0033F389 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		211891451FC5510E0033F389 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2118914A1FC5514C0033F389 /* libc++.tbd */,
+				211891471FC551220033F389 /* libsqlite3.tbd */,
+				211891461FC5510E0033F389 /* libc.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		215A361B1FB1B14C0045D7D2 = {
 			isa = PBXGroup;
 			children = (
 				215A36261FB1B14C0045D7D2 /* CoreDataTest */,
 				215A36251FB1B14C0045D7D2 /* Products */,
+				211891451FC5510E0033F389 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
